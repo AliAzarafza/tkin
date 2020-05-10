@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()
 
-entr = Entry(root)
+entr = Entry(root, width=50 ,borderwidth=5)
 entr.pack()
 
 
