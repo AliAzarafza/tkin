@@ -7,7 +7,7 @@ def myclick():
     mylabel.pack()
 
 
-mybotton = Button(root, text='click', command=myclick)
+mybotton = Button(root, text='click', command=myclick, fg='green', bg='black')
 mybotton.pack()
 
 root.mainloop()
