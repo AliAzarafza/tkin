@@ -4,7 +4,7 @@ root = Tk()
 
 entr = Entry(root, width=50)
 entr.pack()
-
+entr.insert(0, "entr your name")
 
 
 def myclick():
