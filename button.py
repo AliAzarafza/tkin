@@ -2,13 +2,13 @@ from tkinter import *
 
 root = Tk()
 
-entr = Entry(root, width=50 ,borderwidth=5)
+entr = Entry(root, width=50)
 entr.pack()
 
 
 
 def myclick():
-    mylabel = Label(root, text='look!!!  click!')
+    mylabel = Label(root, text=entr.get())
     mylabel.pack()
 
 
