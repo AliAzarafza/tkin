@@ -2,6 +2,11 @@ from tkinter import *
 
 root = Tk()
 
+entr = Entry(root)
+entr.pack()
+
+
+
 def myclick():
     mylabel = Label(root, text='look!!!  click!')
     mylabel.pack()
