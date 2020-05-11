@@ -1,9 +1,10 @@
 from tkinter import *
+import numpy
 
 root = Tk()
 root.title('Calculator')
 
-
+f_num = int
 entr = Entry(root, width=35, borderwidth=3)
 entr.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
@@ -16,6 +17,19 @@ def ButtonClick(number):
 def ButtonClear():
     entr.delete(0, END)
 
+def ButtonAdd():
+    firstnum = entr.get()
+    f_num = int(firstnum)
+    entr.delete(0,END)
+def plus(num1, num2):
+    return num1 + num2
+
+def ButtonEqual():
+    secontnum = entr.get()
+    entr.delete(0,END)
+    s_num = int(secontnum)
+    ans =  plus(f_num, s_num)
+    entr.insert(0, ans)
 
 #buttons
 button_1 = Button(root, text="1", padx=35, pady=20, command=lambda: ButtonClick(1))
@@ -28,8 +42,8 @@ button_7 = Button(root, text="7", padx=35, pady=20, command=lambda: ButtonClick(
 button_8 = Button(root, text="8", padx=35, pady=20, command=lambda: ButtonClick(8))
 button_9 = Button(root, text="9", padx=35, pady=20, command=lambda: ButtonClick(9))
 button_0 = Button(root, text="0", padx=35, pady=20, command=lambda: ButtonClick(0))
-button_add = Button(root, text="+", padx=34, pady=20, command=lambda: ButtonClick())
-button_eqale = Button(root, text="=", padx=80, pady=20, command=lambda: ButtonClick())
+button_add = Button(root, text="+", padx=34, pady=20, command=ButtonAdd)
+button_eqale = Button(root, text="=", padx=80, pady=20, command=ButtonEqual)
 button_clear = Button(root, text="clear", padx=68, pady=20, command=ButtonClear)
 
 
